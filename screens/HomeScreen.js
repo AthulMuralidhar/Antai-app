@@ -4,7 +4,6 @@ import { StyleSheet,
   View,
   Image,
   TouchableOpacity,
-  Button,
  } from 'react-native';
 
 export default class HomeScreen extends React.Component {
@@ -16,13 +15,12 @@ export default class HomeScreen extends React.Component {
           style={styles.imgStyle}
         />
         <Text style={styles.titleText}>The Antai App</Text>
-        <TouchableOpacity style={styles.btnStyle} onPress={()=>{alert('pressed!')}}>
+        <TouchableOpacity 
+          style={styles.btnStyle} 
+          onPress={()=>{this.props.navigation.navigate('Overview')}}
+          >
           <Text>Play</Text>
         </TouchableOpacity>
-        <Button
-          title="Go to Overview"
-          onPress={()=>{this.props.navigation.navigate('Overview')}}
-        />
       </View>
     );
   }
