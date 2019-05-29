@@ -4,6 +4,7 @@ import { StyleSheet,
   View,
   Image,
   TouchableOpacity,
+  Button,
  } from 'react-native';
 
 export default class HomeScreen extends React.Component {
@@ -18,6 +19,10 @@ export default class HomeScreen extends React.Component {
         <TouchableOpacity style={styles.btnStyle} onPress={()=>{alert('pressed!')}}>
           <Text>Play</Text>
         </TouchableOpacity>
+        <Button
+          title="Go to Overview"
+          onPress={()=>{this.props.navigation.navigate('Overview')}}
+        />
       </View>
     );
   }
