@@ -17,8 +17,7 @@ export default class HomeScreen extends React.Component {
         <Text style={styles.titleText}>The Antai App</Text>
         <TouchableOpacity 
           style={styles.btnStyle} 
-          onPress={()=>{this.props.navigation.navigate('Overview')}}
-          >
+          onPress={()=>{this.props.navigation.navigate('Overview')}}>
           <Text>Play</Text>
         </TouchableOpacity>
       </View>

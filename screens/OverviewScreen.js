@@ -12,7 +12,9 @@ export default class OverviewScreen extends React.Component{
             <View>
                 <Text>Overview screen!</Text>
                 
-                <TouchableOpacity style={styles.btnGoogleStyle}>
+                <TouchableOpacity 
+                 style={styles.btnGoogleStyle}
+                 onPress={()=>{this.props.navigation.navigate('Google')}}>
                     <Text>Google</Text>
                 </TouchableOpacity>
                 
